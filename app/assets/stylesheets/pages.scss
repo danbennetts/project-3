@@ -116,3 +116,19 @@ body {
   color: #82888A;
   border-bottom: 1px solid #CCC;
 }
+
+.sidebar-link {
+  color: #82888A;
+  text-decoration: none;
+}
+
+.sidebar-link:hover, .sidebar-link:focus {
+  color: #CACCCD;
+  text-decoration: none;
+}
+
+.active.sidebar-link {
+  color: #565A5C;
+  font-weight: bold;
+  text-decoration: none;
+}

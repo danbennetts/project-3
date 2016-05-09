@@ -265,4 +265,6 @@ Devise.setup do |config|
 
   config.omniauth :facebook, ENV["FBAPP_ID"], ENV["FBAPP_SECRET"], scope: 'email', info_fields: 'email,name'
 
+  config.omniauth :google_oauth2, ENV["GOOGLE_APP_CLIENT_ID"], ENV["GOOGLE_APP_CLIENT_SECRET"]
+
 end
