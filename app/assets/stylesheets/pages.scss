@@ -151,3 +151,13 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
 }
+
+.select:before {
+  content: '\25bc';
+  font-size: 1.2em;
+  position: absolute;
+  color: #82888A;
+  top: 40px;
+  right: 30px;
+  transform: scale(0.84, 0.42);
+}
