@@ -16,4 +16,12 @@ class Room < ActiveRecord::Base
   validates :address, presence: true
 
   accepts_nested_attributes_for :photos
+
+  def show_first_photo(size)
+    if self.photos.length == 0
+      "http://en.spongepedia.org/images/0/02/SpongeBobsPineapple.jpg"  
+    else
+      self.photos[0].image.url(size)
+    end
+  end
 end
