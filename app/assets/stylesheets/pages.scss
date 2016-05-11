@@ -243,3 +243,12 @@ input[type="checkbox"]:checked:before {
 .thumb {
   width: 100%;
 }
+
+.conversation {
+  color: #7F7F7F;
+  padding: 10px;
+}
+
+.conversation:hover, .conversation:focus {
+  background-color: #F4F4F5;
+}
