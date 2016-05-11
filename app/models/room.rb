@@ -2,6 +2,9 @@ class Room < ActiveRecord::Base
   belongs_to :user
   has_many :photos
 
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
   validates :home_type, presence: true
   validates :room_type, presence: true
   validates :accommodate, presence: true
@@ -10,6 +13,7 @@ class Room < ActiveRecord::Base
   validates :listing_name, presence: true, length: {maximum: 50}
   validates :summary, presence: true, length: {maximum: 500}
   validates :address, presence: true
+  validates :image, presence: true
 
   accepts_nested_attributes_for :photos
 end
